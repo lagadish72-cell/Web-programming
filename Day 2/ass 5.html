@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lagadish S - Resume</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f6f9;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .resume {
+        max-width: 900px;
+        margin: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+        color: #2c3e50;
+        margin-bottom: 5px;
+    }
+
+    h2 {
+        color: #34495e;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 5px;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    .voice-btn {
+        background: #3498db;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .voice-btn:hover {
+        background: #2980b9;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="resume" id="resume-content">
+
+    <h1>LAGADISH S</h1>
+
+    <button class="voice-btn" onclick="readResume()">
+        🔊 Read Resume
+    </button>
+
+    <h2>Skills</h2>
+
+    <p><strong>Hard Skills:</strong> Python, JavaScript, Java, C++</p>
+
+    <p><strong>Soft Skills:</strong> Communication, Critical Thinking, Teamwork,
+    Problem Solving, Adaptability</p>
+
+    <h2>Education</h2>
+
+    <ul>
+        <li><strong>The TipsGlobal Institute</strong> - BCA (2024–2027)</li>
+
+        <li><strong>Government Higher Secondary School, Kannivadi, Tirupur</strong>
+            - Class XII (2024) | Percentage: 55.1%
+        </li>
+
+        <li><strong>Government Higher Secondary School, Kannivadi, Tirupur</strong>
+            - Class X (2022) | Percentage: 52%
+        </li>
+    </ul>
+
+    <h2>Technical Projects</h2>
+
+    <h3>E-Commerce Web Application</h3>
+
+    <p>
+        Designed and developed a fully responsive e-commerce web application
+        using HTML, CSS, and JavaScript.
+        Implemented dynamic product filtering, shopping cart functionality,
+        and a user-friendly interface to improve customer experience
+        across multiple devices.
+    </p>
+
+    <h3>Portfolio Website</h3>
+
+    <p>
+        Built a modern and interactive portfolio website to showcase projects,
+        technical skills, and achievements.
+    </p>
+
+    <h2>Certifications</h2>
+
+    <p>
+        <strong>Web Development – IBM SkillsBuild</strong>
+        (September 2025)
+    </p>
+
+    <p>
+        Skills Learned:
+        Communication, Critical Thinking, HTML/CSS, Leadership,
+        Teamwork, Decision-Making, Presentations, Lead Generation.
+    </p>
+
+    <h2>Problem Solving & Data Structures</h2>
+
+    <h3>LeetCode & HackerRank</h3>
+
+    <p>
+        Demonstrates proficiency in core data structures including arrays,
+        linked lists, stacks, queues, trees, and graphs.
+        Applies algorithms such as sorting, searching, recursion,
+        and dynamic programming to solve coding challenges.
+        Evaluates time and space complexity to optimize solutions and
+        strengthens logical thinking and debugging skills through regular practice.
+    </p>
+
+</div>
+
+<script>
+function readResume() {
+    let text = document.getElementById("resume-content").innerText;
+
+    let speech = new SpeechSynthesisUtterance(text);
+
+    speech.rate = 1;
+    speech.pitch = 1;
+    speech.volume = 1;
+
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(speech);
+}
+</script>
+
+</body>
+</html>
